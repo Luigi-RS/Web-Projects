@@ -1,0 +1,195 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f7f7fa 0%, #f3f3f7 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.main-wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 48px);
+    height: calc(100dvh - 48px);
+}
+.container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(255, 152, 0, 0.10);
+    padding: 40px 36px 32px 36px;
+    width: 80vw;
+    max-width: 1440px;
+    min-width: 320px;
+    min-height: 70vh;
+    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+}
+#lang-btn {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.12);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+#lang-btn:hover {
+    background: #f57c00;
+    box-shadow: 0 4px 16px rgba(255, 152, 0, 0.18);
+}
+h1 {
+    color: #e65100;
+    font-size: 2em;
+    margin-bottom: 28px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+li {
+    margin: 18px 0;
+    background: #f9f9fb;
+    border-radius: 10px;
+    transition: background 0.2s;
+    border-left: 5px solid #ff9800;
+}
+li:hover {
+    background: #fff3e0;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: #ff9800;
+    font-size: 1.13em;
+    padding: 14px 18px;
+    border-radius: 10px;
+    transition: color 0.2s, background 0.2s;
+    font-weight: 500;
+}
+a:hover {
+    color: #e65100;
+    background: #fff8e1;
+    text-decoration: underline;
+}
+.disclaimer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 14px 0 10px 0;
+    background: rgba(255, 243, 224, 0.97);
+    font-size: 0.98em;
+    color: #b26a00;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 -2px 12px rgba(255, 152, 0, 0.07);
+    pointer-events: none;
+    user-select: none;
+    height: 48px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+@media (max-width: 900px) {
+    .container {
+        width: 96vw;
+        max-width: 98vw;
+        padding: 18px 2vw 18px 2vw;
+    }
+}
+@media (max-width: 600px) {
+    .main-wrapper {
+        height: calc(100vh - 44px);
+        height: calc(100dvh - 44px);
+    }
+    .container {
+        padding: 18px 2vw 18px 2vw;
+        max-width: 99vw;
+        min-height: 60vh;
+    }
+    #lang-btn {
+        top: 12px;
+        right: 12px;
+        padding: 7px 12px;
+    }
+    .disclaimer {
+        font-size: 0.93em;
+        padding: 10px 0 7px 0;
+        height: 44px;
+    }
+}
+body.dark-mode {
+    background: linear-gradient(135deg, #232323 0%, #181818 100%);
+    color: #f7f7fa;
+}
+body.dark-mode .container {
+    background: #232323;
+    box-shadow: 0 6px 32px rgba(255, 152, 0, 0.08);
+}
+body.dark-mode h1 {
+    color: #ffb74d;
+}
+body.dark-mode ul {
+    /* unchanged */
+}
+body.dark-mode li {
+    background: #292929;
+    border-left: 5px solid #ff9800;
+}
+body.dark-mode li:hover {
+    background: #33312a;
+}
+body.dark-mode a {
+    color: #ffb74d;
+    background: transparent;
+}
+body.dark-mode a:hover {
+    color: #fff3e0;
+    background: #3a2a13;
+}
+body.dark-mode #lang-btn {
+    background: #ff9800;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.18);
+}
+body.dark-mode #lang-btn:hover {
+    background: #f57c00;
+}
+body.dark-mode .disclaimer {
+    background: rgba(40, 30, 10, 0.97);
+    color: #ffb74d;
+    box-shadow: 0 -2px 12px rgba(255, 152, 0, 0.10);
+}
+body.dark-mode #darkmode-btn {
+    background: #232323 !important;
+    color: #ffb74d;
+    border: 1px solid #ff9800;
+}
+body.dark-mode #darkmode-btn:hover {
+    background: #181818 !important;
+}
