@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meus Projetos Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 12px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #1976d2;
+            font-size: 1.1em;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <button id="lang-btn" style="float:right; margin-top:10px;">English</button>
+    <h1 id="main-title">Meus Projetos do Curso de Desenvolvimento Web</h1>
+    <ul id="projects-list">
+        <li><a href="projeto1/index.html" target="_blank">Projeto 1: Página de Portfólio</a></li>
+        <li><a href="projeto2/index.html" target="_blank">Projeto 2: Loja Virtual</a></li>
+        <li><a href="projeto3/index.html" target="_blank">Projeto 3: Calculadora Online</a></li>
+        <!-- Adicione mais projetos conforme necessário -->
+    </ul>
+    <script>
+        const langBtn = document.getElementById('lang-btn');
+        const mainTitle = document.getElementById('main-title');
+        const projectsList = document.getElementById('projects-list');
+
+        const projects = [
+            {
+                pt: 'Projeto 1: Página de Portfólio',
+                en: 'Project 1: Portfolio Page',
+                href: 'projeto1/index.html'
+            },
+            {
+                pt: 'Projeto 2: Loja Virtual',
+                en: 'Project 2: Online Store',
+                href: 'projeto2/index.html'
+            },
+            {
+                pt: 'Projeto 3: Calculadora Online',
+                en: 'Project 3: Online Calculator',
+                href: 'projeto3/index.html'
+            }
+        ];
+
+        let isPT = true;
+
+        langBtn.addEventListener('click', () => {
+            isPT = !isPT;
+            if (isPT) {
+                langBtn.textContent = 'English';
+                mainTitle.textContent = 'Meus Projetos do Curso de Desenvolvimento Web';
+                projectsList.innerHTML = projects.map(p => `<li><a href="${p.href}" target="_blank">${p.pt}</a></li>`).join('');
+            } else {
+                langBtn.textContent = 'Português';
+                mainTitle.textContent = 'My Web Development Course Projects';
+                projectsList.innerHTML = projects.map(p => `<li><a href="${p.href}" target="_blank">${p.en}</a></li>`).join('');
+            }
+        });
+    </script>
+</body>
+</html>
