@@ -1,0 +1,129 @@
+:root {
+  --vermelho: #d50032;
+  --azul: #0033a0;
+  --branco: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--branco);
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(90deg, var(--azul) 60%, var(--vermelho) 100%);
+  color: var(--branco);
+  padding: 1.5rem 0 1rem 0;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #ffe600;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: #f7f7f7;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+section h2 {
+  color: var(--azul);
+  margin-bottom: 1rem;
+}
+
+.logo {
+  display: block;
+  margin: 1rem auto 0 auto;
+  max-width: 120px;
+}
+
+.responsive-img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 1rem 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+footer {
+  background: var(--azul);
+  color: var(--branco);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+/* Responsividade (RNF02) */
+@media (max-width: 700px) {
+  main {
+    padding: 0 0.5rem;
+  }
+  nav ul {
+    gap: 1rem;
+    font-size: 0.95rem;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  section {
+    padding: 1rem;
+  }
+  .responsive-img, .logo {
+    max-width: 90vw;
+  }
+}
