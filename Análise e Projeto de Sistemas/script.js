@@ -1,4 +1,3 @@
-// Navegação suave para âncoras (RF07)
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
